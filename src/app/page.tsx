@@ -1,9 +1,12 @@
+import { desc } from "drizzle-orm";
 import Link from "next/link";
 
 const mockURL = ["https://53pi0p1qzj.ufs.sh/f/GiNCL67dJz3EXEZyI3Wsl94rcK8QCjzfitMPoOh2AgxVuLDY", "https://53pi0p1qzj.ufs.sh/f/GiNCL67dJz3EBRiJoZPTXhZjFlKNDvJ3O16uz5ad9bVq82PR", "https://53pi0p1qzj.ufs.sh/f/GiNCL67dJz3E1O8yOO2GtvzRKQYNEFHTnX6sqoWfbeJSVmud"];
-const mockImages = mockURL.map((url, index) =>({ 
+const description = ["welcome back", "crow", "true"];
+const mockImages = mockURL.map((url, index, caption) =>({ 
         id: index + 1,
         url,
+        caption: description[index],
       }));
 export default function HomePage() {
   return (
@@ -13,6 +16,7 @@ export default function HomePage() {
         mockImages.map((image) => (
           <div key ={image.id} className="w-48">
             <img src={image.url} alt="image" />
+            <p>{image.caption}</p>
           </div>
         ))
       }
