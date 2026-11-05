@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geist.variable}`}>
-        <div className="w-full"> First Layout</div>
+        <div className="w-full text-6xl bg-[url(https://53pi0p1qzj.ufs.sh/f/GiNCL67dJz3ENoMYUsej1uCvpZwz4X0BVdP2l8M76kD3GWbt)]"> E </div>
         {children}
       </body>
     </html>
