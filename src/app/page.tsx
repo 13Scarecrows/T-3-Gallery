@@ -31,7 +31,7 @@ export default function HomePage() {
         ))
       }
     </div>
-
+    <Link href="/layer02" className="text-xl text-blue-500">CLICK HERE CLICK HERE CLICK HERE</Link>
     </main>
   );
 }
