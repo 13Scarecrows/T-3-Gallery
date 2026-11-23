@@ -20,7 +20,7 @@ export default function LayoutPage02({
     //Get rid of htlm and body to fix hydration error
     <>
       <div className="w-full">woah second layer D: click this non-suspicious link vvv</div>
-        <Link href="/" className="text-xl text-blue-500">CLICK HERE CLICK HERE CLICK HERE</Link>
+
         {children}
     </>
 
