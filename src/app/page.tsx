@@ -1,3 +1,4 @@
+'use client'
 import { desc } from "drizzle-orm";
 import Link from "next/link";
 
@@ -8,10 +9,13 @@ const mockImages = mockURL.map((url, index, caption) =>({
         url,
         caption: description[index],
       }));
+const alertFunction = () => {
+  alert("You have been scammed successfully sucker")
+}
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-linear-to-t from-orange-500 to-yellow-400 bg-url[]">
-      <div className="flex flex-wrap gap-4">
+    <main className="flex min-h-screen flex-col items-center justify-center bg-linear-to-t from-black to-blue-500 bg-url[]">
+      {/* /* <div className="flex flex-wrap gap-4">
       {
         mockImages.map((image) => (
           <div key ={image.id} className="w-48">
@@ -30,8 +34,30 @@ export default function HomePage() {
           </div>
         ))
       }
+        </div>  */}
+        <div className="hero bg-base-200 min-h-screen">
+      <div className="hero-content flex-col lg:flex-row-reverse">
+        <div className="text-center lg:text-left">
+          <h1 className="text-5xl font-bold">Please provide all important information</h1>
+          <p className="py-6">
+            If you provide all your information here, we will give you a 5% discount on nothing and take all your belongings and soul
+          </p>
+        </div>
+        <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+          <div className="card-body">
+            <fieldset className="fieldset">
+              <label className="label">Credit Card Number</label>
+              <input type="password" className="input" placeholder="Credit Card Number" />
+              <label className="label">Social Security Number</label>
+              <input type="password" className="input" placeholder="Social Security Number" />
+              <label className="label">Address</label>
+              <input type="password" className="input" placeholder="Address" />
+              <button className="btn btn-neutral mt-4" onClick={alertFunction}>Send Information</button>
+            </fieldset>
+          </div>
+        </div>
+      </div>
     </div>
-    <Link href="/layer02"><button className="btn btn-ghost">CLICK HERE</button></Link>
-    </main>
+  </main>
   );
 }

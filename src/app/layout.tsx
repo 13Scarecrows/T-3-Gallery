@@ -2,6 +2,7 @@ import "~/styles/globals.css";
 
 import { type Metadata } from "next";
 import { Geist } from "next/font/google";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "VIRUS",
@@ -20,8 +21,28 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geist.variable}`}>
-        <div className="w-full text-6xl bg-[url(https://53pi0p1qzj.ufs.sh/f/GiNCL67dJz3ENoMYUsej1uCvpZwz4X0BVdP2l8M76kD3GWbt)]"> E </div>
-        {children}
+        {/* <div className="w-full text-6xl bg-[url(https://53pi0p1qzj.ufs.sh/f/GiNCL67dJz3ENoMYUsej1uCvpZwz4X0BVdP2l8M76kD3GWbt)]"> E </div> */}
+        
+
+        {/* side drawer stuff */}
+        <div className="drawer bg-blue-500">
+        <input id="my-drawer-1" type="checkbox" className="drawer-toggle" />
+        <div className="drawer-content">
+          {/* Page content here */}
+          <label htmlFor="my-drawer-1" className="btn drawer-button btn-ghost">Switch Page</label>
+        </div>
+        <div className="drawer-side">
+          <label htmlFor="my-drawer-1" aria-label="close sidebar" className="drawer-overlay"></label>
+          <ul className="menu bg-base-200 min-h-full w-80 p-4">
+            {/* Sidebar content here */}
+            <Link href="/" className="btn btn-ghost">Page 1</Link>
+            <Link href="/layer02" className="btn btn-ghost">Page 2</Link>
+          </ul>
+        </div>
+        </div>  
+
+       {children}
+
       </body>
     </html>
   );

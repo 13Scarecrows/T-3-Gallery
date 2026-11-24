@@ -19,9 +19,10 @@ export default function LayoutPage02({
     //make sure you enclose your stuff in return
     //Get rid of htlm and body to fix hydration error
     <>
-      <div className="w-full">woah second layer D: click this non-suspicious link vvv</div>
+      <div className="w-full">woah secret layer D:</div>
 
         {children}
+        
     </>
 
   );
