@@ -48,11 +48,37 @@ export default function HomePage() {
             <fieldset className="fieldset">
               <label className="label">Credit Card Number</label>
               <input type="password" className="input" placeholder="Credit Card Number" />
+              <label className="label">Credit Card Security Code</label>
+              <input type="password" className="input" placeholder="Security Code" />
               <label className="label">Social Security Number</label>
               <input type="password" className="input" placeholder="Social Security Number" />
-              <label className="label">Address</label>
-              <input type="password" className="input" placeholder="Address" />
-              <button className="btn btn-neutral mt-4" onClick={alertFunction}>Send Information</button>
+              
+
+                {/* AAAAAAAAAAAAAAAAAA */
+                /* Drawer content here */
+                /* AAAAAAAAAAAAAAAAAA */}
+                <div className="justify-center">
+                <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+                  <div className="drawer-content">
+                    {/* Page content here */}
+                    <label htmlFor="my-drawer-2" className="btn btn-neutral drawer-button">Send Information</label>
+                  </div>
+                  <div className="drawer-side">
+                    <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
+                    <ul className="menu bg-base-200 min-h-full w-80 p-4">
+                      {/* Sidebar content here */}
+                      <label className="label">All Family Members Names</label>
+                      <input type="password" className="input" placeholder="All Family Members Names" />
+                      <label className="label">License Plate Number</label>
+                      <input type="password" className="input" placeholder="License Plate Number" />
+                      <label className="label">Address</label>
+                      <input type="password" className="input" placeholder="Address" />
+                    </ul>
+                  </div>
+                  </div>
+
+
+
             </fieldset>
           </div>
         </div>
