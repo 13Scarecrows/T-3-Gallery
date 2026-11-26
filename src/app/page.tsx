@@ -38,21 +38,23 @@ export default function HomePage() {
         <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="text-center lg:text-left">
-          <h1 className="text-5xl font-bold">Please provide all important information</h1>
+          <h1 className="text-5xl font-bold">Please Login</h1>
           <p className="py-6">
-            If you provide all your information here, we will give you a 5% discount on nothing and take all your belongings and soul
+            If you do not remember any information, just get good
           </p>
         </div>
         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
           <div className="card-body">
             <fieldset className="fieldset">
-              <label className="label">Credit Card Number</label>
-              <input type="password" className="input" placeholder="Credit Card Number" />
-              <label className="label">Credit Card Security Code</label>
-              <input type="password" className="input" placeholder="Security Code" />
-              <label className="label">Social Security Number</label>
-              <input type="password" className="input" placeholder="Social Security Number" />
+              <label className="label">Username</label>
+              <input type="password" className="input" placeholder="Username" />
+              <label className="label">Email</label>
+              <input type="password" className="input" placeholder="Email" />
+              <label className="label">Password</label>
+              <input type="password" className="input" placeholder="Password" />
               
+
+
 
                 {/* AAAAAAAAAAAAAAAAAA */
                 /* Drawer content here */
@@ -61,24 +63,48 @@ export default function HomePage() {
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
                   <div className="drawer-content">
                     {/* Page content here */}
-                    <label htmlFor="my-drawer-2" className="btn btn-neutral drawer-button">Send Information</label>
+                    <label htmlFor="my-drawer-2" className="btn btn-neutral drawer-button">Login</label>
                   </div>
                   <div className="drawer-side">
                     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
                     <ul className="menu bg-base-200 min-h-full w-80 p-4">
                       {/* Sidebar content here */}
-                      <label className="label">All Family Members Names</label>
-                      <input type="password" className="input" placeholder="All Family Members Names" />
-                      <label className="label">License Plate Number</label>
-                      <input type="password" className="input" placeholder="License Plate Number" />
-                      <label className="label">Address</label>
-                      <input type="password" className="input" placeholder="Address" />
+                      <label>Please Continue Logging In</label>
+                      <label className="label">Security Passcode</label>
+                      <input type="password" className="input" placeholder="Security Passcode" />
+                      <label className="label">Date the Account Was Made</label>
+                      <input type="password" className="input" placeholder="mm/dd/yyyy" />
+                      <label className="label">Verification Code</label>
+                      <input type="password" className="input" placeholder="Verification Code" />
+                      
+
+
+                       {/* AAAAAAAAAAAAAAAAAA */
+                        /*  Modal Window Here */
+                        /* AAAAAAAAAAAAAAAAAA */}
+                      <button className="btn btn-neutral" onClick={()=> {document.getElementById('my_modal_1').showModal()}}>Login</button>
+                        <dialog id="my_modal_1" className="modal">
+                          <div className="modal-box">
+                            {/* Modal content */}
+                            <h4 className="font-bold text-lg">We Still Need More Login Info</h4>
+                            <label className="label">Current Account Age in Years</label>
+                            <input type="password" className="input" placeholder="Years Old" />
+                            <label className="label">Date the Account Was Last Used</label>
+                            <input type="password" className="input" placeholder="mm/dd/yyyy" />
+                            <label className="label">Another Verification Code</label>
+                            <input type="password" className="input" placeholder="Verification Code" />
+
+                            <div className="modal-action">
+                              <form method="dialog">
+                                {/* if there is a button in form, it will close the modal */}
+                                <button className="btn btn-neutral">Login</button>
+                              </form>
+                            </div>
+                          </div>
+                        </dialog>
                     </ul>
                   </div>
                   </div>
-
-
-
             </fieldset>
           </div>
         </div>
